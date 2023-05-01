@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Estou no ver Produto</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    </head>
+    <body>
+        <h1>Ver produto do, {{ nome }} </h1>
+
+        <form action="{% url 'lista' %}" method="POST">{%csrf_token%}
+        <input type="text" name="nome" placeholder="Digite seu nome">
+        <br>
+        <input type="number" name="idade" placeholder="Digite sua idade">
+        <br>
+        <input type="submit" value="enviar">
+
+        </form>
+    </body> 
+</html> 
